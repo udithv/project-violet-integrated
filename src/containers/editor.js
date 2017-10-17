@@ -1,28 +1,21 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
-//Containers
-import FileTree from './filetree';
-//Actions 
-import { fetchFileTree } from '../actions/index';
+import TreeContainer from './tree';
+
+//import 'font-awesome/css/font-awesome.min.css';
 
 class Editor extends Component {
-    componentWillMount() {
-        this.props.fetchFileTree();
-    }
+ 
     
     render() {
         return (
             <div>
-                <FileTree />
+                <TreeContainer />
             </div>
         );
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchFileTree }, dispatch);
-}
 
-export default connect(null, mapDispatchToProps)(Editor);
+
+export default Editor;
