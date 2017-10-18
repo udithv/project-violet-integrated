@@ -31,10 +31,12 @@
     "font-awesome": "^4.7.0",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
+    "react-ace": "^5.4.0",
     "react-dom": "^0.14.3",
     "react-json-view": "^1.13.1",
     "react-redux": "4.3.0",
     "react-router": "^2.0.1",
+    "react-split-pane": "^0.1.66",
     "redux": "^3.0.4",
     "redux-promise": "^0.5.3"
   }
