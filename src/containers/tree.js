@@ -8,7 +8,7 @@ import { fetchFileTree } from '../actions/index';
 import TreeView from '../components/TreeView/TreeView';
 
 class TreeContainer extends Component {
-    componentDidMount(){
+    componentWillMount(){
         this.props.fetchFileTree();
     }
 
