@@ -9,7 +9,7 @@ class File extends Component {
     }
 
     onClickHandler(){
-        this.props.fetchFileData({ path: this.props.file.path });
+        this.props.fetchFileData(this.props.file);
     }
 
     render() {

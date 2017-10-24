@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import AceEditor from 'react-ace';
 
-import brace from 'brace';
-import 'brace/mode/javascript';
-import 'brace/theme/github';
-import 'brace/theme/solarized_dark';
+
+//Assets
+import '../components/TreeView/assets/themes';
+import '../components/TreeView/assets/modes';
 
 class ContentExplorer extends Component {
-    render() {
+
+    renderEditor() {
         return (
-            <div style={styles.editorStyle}>
                 <AceEditor
                     mode="javascript"
                     theme="solarized_dark"
@@ -21,8 +21,18 @@ class ContentExplorer extends Component {
                     name="UNIQUE_ID_OF_DIV"
                     editorProps={{$blockScrolling: true}}
                 />
+            
+        );
+    }
+
+    render(){
+
+        return(
+            <div style={styles.editorStyle}>
+                {this.renderEditor()}
             </div>
         );
+       
     }
 }
 
@@ -33,7 +43,7 @@ const styles = {
     }
 };
 
-function mapStateToProps({ filedata }){
+function mapStateToProps({ filedata}){
     return { fdata: filedata.fdata };
 }
 
