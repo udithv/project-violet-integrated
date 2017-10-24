@@ -7,9 +7,12 @@ import AceEditor from 'react-ace';
 import '../components/TreeView/assets/themes';
 import '../components/TreeView/assets/modes';
 
+
+
 class ContentExplorer extends Component {
 
     renderEditor() {
+ 
         return (
                 <AceEditor
                     mode="javascript"
@@ -26,7 +29,6 @@ class ContentExplorer extends Component {
     }
 
     render(){
-
         return(
             <div style={styles.editorStyle}>
                 {this.renderEditor()}

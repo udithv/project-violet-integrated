@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import Select from 'react-select';
 
 class Footer extends Component {
+
+    
+
     render(){
         return (
             <div style={styles.footerStyle} >
@@ -9,6 +13,8 @@ class Footer extends Component {
         );
     }
 }
+
+
 
 const styles = {
     footerStyle: {
